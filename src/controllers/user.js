@@ -39,10 +39,10 @@ const getUser = async (req, res)=>{
 
 const login = async (req, res)=>{
     try {
-        const {email, password} = req.body
+        const {username, password} = req.body
         const user = await Users.findOne({
             where : {
-                email : email
+                username : username
             },
             attributes : [
                 "id",
